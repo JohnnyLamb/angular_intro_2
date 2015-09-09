@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- define our angular app -->
-<html ng-app>
+<!-- define our angular app and set the controller -->
+<html ng-app="bitcoinCalculator" ng-controller="bitcoinController">
   <head>
     <title>Bitcoin Investment Calculator</title>
     <meta charset="utf-8">
@@ -25,5 +25,13 @@
       <br><br>
       <h4>You have <span class="number">{{ somenumber }}</span> Bitcoins - nice!</h4>
     </div>
+    <!-- angular module -->
+<script type="text/javascript">
+  var bitcoinCalculator = angular.module('bitcoinCalculator', []);
+    bitcoinCalculator.controller('bitcoinController', ['$scope', function ($scope) {
+      // attaching 0 to the DOM
+      $scope.somenumber = 0;
+    }]);
+</script>
   </body>
 </html>
