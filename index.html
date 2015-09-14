@@ -28,7 +28,7 @@
 
        <h1>Super useful calculator:</h1>
        <h1>How Much do you want to tip?</h1>
-        <input type="text" ng-model="meal">
+        <input type="number" ng-model="meal">
         <select class="selectpicker" ng-model="tip">
          <option value=".10">10%</option>
          <option value=".20">20%</option>
@@ -36,10 +36,23 @@
        </select>
         <h1>subtotal: {{meal | currency}}</h1>
         <h1>tip: {{tip * meal| currency}}</h1>
-        <h1>total: {{meal + tip| currency:number:3}}</h1>
+        <h1>total: {{meal + tip| currency}}</h1>
 
+    <h1>Please Fill Out the Folliwing</h1>
+    <h1>Boy's Name</h1>
+    <input type="text" ng-model="boy">
+     <h1>Adjective</h1>
+    <input type="text" ng-model="adjective">
+     <h1>Plural Noun</h1>
+    <input type="text" ng-model="pluralnoun1">
+     <h1>An insect, plural</h1>
+    <input type="text" ng-model="insect">
+     <h1>Plural Noun</h1>
+    <input type="text" ng-model="pluralnoun2">
+     <h1>A Verb Ending in "s"</h1>
+    <input type="text" ng-model="verb">
 
-
+    <h3>I'm in love with <span>{{boy}}</span>. He's so <span>{{adjective}}</span>! He has big flat <span>{{pluralnoun1}}</span>, and when our <spant>{{insect}}</span> meet, I get <span>{{pluralnoun2}}</span> in my stomach. I've fallen for him like a ton of <span>{{verb}}</span>, and he shuffles for me, too. But I think he's got another girlfriend. What should I do?</h3>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
    <script type="text/javascript" src="app.js"></script>
