@@ -4,18 +4,24 @@
     <meta charset="utf-8">
     <title>Hello, World!</title>
   </head>
-  <body>
-    <div ng-controller="HelloController">
-      <h2>Hello, {{hello.title}}!</h2>
-      <h2>1 + 2 is, {{1+2 }}!</h2>
-      <h2>my name is, {{"Bojack" + " Horseman"}}!</h2>
-      <h2>{{3.14159265359 | currency:"&euro;"}}</h2>
-    </div>
-    <h1>please say something:</h1>
-    <input type="text" ng-model="filter">
-    <h1>yelling: {{filter| uppercase}}</h1>
-    <h1>whispering: {{filter| lowercase}}</h1>
+  <body ng-controller="MainController">
+    <ul>
+  <li ng-repeat="name in names">
+    {{name}}
+   </li>
+</ul>
 
+    <ul>
+  <li ng-repeat="symbol in symbols">
+    {{symbol}}
+   </li>
+</ul>
+
+ <ul>
+  <li ng-repeat="num in dupes track by $index">
+    <p>{{num}}</p>
+   </li>
+</ul>
 
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>

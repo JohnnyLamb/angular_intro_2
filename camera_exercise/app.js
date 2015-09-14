@@ -1,12 +1,12 @@
 var app = angular.module("myapp", []);
-      app.controller("HelloController", function($scope) {
-        $scope.hello = {};
-        $scope.hello.title = "Worldy yay";
-      });
+      app.controller("MainController", ['$scope',function($scope) {
+          $scope.hello = {};
+          $scope.hello.title = "Worldy yay";
+          $scope.names = ["Harry", "Ron", "Hermione", "Sirius", "Hedwig", "Tonks"];
+          $scope.symbols = ["&spades;","&clubs;","&hearts;","&diams;"];
 
-      // app.controller('expressions',function($scope){
-      //   $scope.add = {};
-      //   $scope.add.
+          $scope.dupes =[1,1,2,5,6,9,9,9];
 
-      // });
+      }]);
+
 
