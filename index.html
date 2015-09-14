@@ -9,8 +9,22 @@
       <h2>Hello, {{hello.title}}!</h2>
       <h2>1 + 2 is, {{1+2 }}!</h2>
       <h2>my name is, {{"Bojack" + " Horseman"}}!</h2>
-      <h2>my name is, {{"Bojack" + " Horseman"}}!</h2>
+      <h2>{{3.14159265359 | currency:"&euro;"}}</h2>
     </div>
+    <h1>please say something:</h1>
+    <input type="text" ng-model="filter">
+    <h1>yelling: {{filter| uppercase}}</h1>
+    <h1>whispering: {{filter| lowercase}}</h1>
+
+    <label for="name">How many digits of PI?</label>
+       <select class="selectpicker" ng-model="pi">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+       </select>
+
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
    <script type="text/javascript" src="app.js"></script>
   </body>
