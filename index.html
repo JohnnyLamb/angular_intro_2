@@ -23,6 +23,22 @@
          <option>3</option>
        </select>
 
+       <h1>{{3.1415645 | number:pi}}</h1>
+
+
+       <h1>Super useful calculator:</h1>
+       <h1>How Much do you want to tip?</h1>
+        <input type="text" ng-model="meal">
+        <select class="selectpicker" ng-model="tip">
+         <option value=".10">10%</option>
+         <option value=".20">20%</option>
+         <option value=".30">30%</option>
+       </select>
+        <h1>subtotal: {{meal | currency}}</h1>
+        <h1>tip: {{tip * meal| currency}}</h1>
+        <h1>total: {{meal + tip| currency:number:3}}</h1>
+
+
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
