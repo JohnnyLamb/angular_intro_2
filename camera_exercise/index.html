@@ -7,7 +7,7 @@
   </head>
   <body ng-controller="MainController">
     <ul>
-  <li ng-repeat="name in names">
+ <!--  <li ng-repeat="name in names">
     {{name}}
    </li>
 </ul>
@@ -23,21 +23,33 @@
     <p>{{num}}</p>
    </li>
 </ul>
-
-<ul>
-  <li ng-repeat="cam in cameras">
-    <p>{{cam.title}}</p>
-    <p>{{cam.title}}</p>
-    <img ng-src='{{cam.image}}'/>
-    <p>{{cam.price|currency}}</p>
-   </li>
-</ul>
-
 <h1>enter password:</h1>
     <input type="text"  ng-model="password">
     <h1 ng-class="{highlight:password.length > 4}">your password is {{password.length}} characters </h1>
 
- <button type="submit" class="btn btn-default" ng-show="show=password.length > 6" >submit</button>
+ <button type="submit" class="btn btn-default" ng-show="show=password.length > 6" >submit</button> -->
+<h1>Camera Shop</h1>
+<label for="name">How many digits of PI?</label>
+       <select class="selectpicker" ng-model="pi">
+         <option>price</option>
+         <option>rating</option>
+
+       </select>
+
+       <h1>{{3.1415645 | number:pi}}</h1>
+
+
+
+<ul>
+  <li ng-repeat="cam in cameras">
+    <p>{{cam.title}}</p>
+    <img ng-src='{{cam.image}}'/>
+    <p>{{cam.rating}}</p>
+    <p>{{cam.price|currency}}</p>
+
+   </li>
+</ul>
+
 
 
 
